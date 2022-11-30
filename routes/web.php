@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Livewire\{
+    ShowTweets
+};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('tweets', ShowTweets::class);
 
 Route::get('/', function () {
     return view('welcome');
